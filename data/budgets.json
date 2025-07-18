@@ -1,0 +1,22 @@
+{
+    "Importation": {
+        "category": "Importation",
+        "limit": 1200000.0,
+        "current_spending": 4800000.0
+    },
+    "importation": {
+        "category": "importation",
+        "limit": 5000000,
+        "current_spending": 2300000.0
+    },
+    "Cloths": {
+        "category": "Cloths",
+        "limit": 80000.0,
+        "current_spending": 120000.0
+    },
+    "Books": {
+        "category": "Books",
+        "limit": 150000.0,
+        "current_spending": 120000.0
+    }
+}
