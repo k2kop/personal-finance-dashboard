@@ -1,4 +1,4 @@
-# 💸 Personal Finance Dashboard
+# Personal Finance Dashboard
 
 A desktop GUI app to manage transactions, set budgets, view reports, send email alerts, and check real-time exchange rates.
 
@@ -8,7 +8,7 @@ A desktop GUI app to manage transactions, set budgets, view reports, send email 
 - Set monthly budget limits per category.
 - Visual dashboard with current spending updates.
 - Budget alert system with email integration.
-- Currency exchange rate viewer (via API).
+- Currency exchange rate viewer .
 - Export transaction history to CSV.
 
 ## Built With
@@ -18,6 +18,8 @@ A desktop GUI app to manage transactions, set budgets, view reports, send email 
 - pandas
 - python-decouple
 - requests
+- bs4
+- matplotlib
 
 ## Setup Instructions
 

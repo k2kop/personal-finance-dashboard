@@ -45,7 +45,7 @@ class FinanceApp(tk.Tk):
         for frame in self.frames.values():
             frame.pack_forget()
 
-        self.show_frame("report")  # Show default frame
+        self.show_frame("report") 
 
     def show_frame(self, name):
         for f in self.frames.values():
@@ -55,6 +55,9 @@ class FinanceApp(tk.Tk):
         frame.pack(fill="both", expand=True)
         if hasattr(frame, 'on_show'):
             frame.on_show()
+            
+        if hasattr(frame, 'update_spending_from_transactions'):
+            frame.update_spending_from_transactions()
             
         if name == "budget" and hasattr(self.frames[name], "load_budgets"):
             self.frames[name].load_budgets()

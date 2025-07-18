@@ -24,7 +24,7 @@ def scrape_exchange_rate(base="USD", target="NGN"):
         return rate
 
     except Exception as e:
-        print(f"⚠ Error scraping {base} to {target}: {e}")
+        print(f"Error scraping {base} to {target}: {e}")
         return load_rate_from_cache(base, target)
 
 def save_rate_to_cache(base, target, rate):

@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import pandas as pd
 from decouple import config
-from budget import Budget  # ✅ Reuse the logic
+from budget import Budget 
 from pathlib import Path
 
 BUDGET_FILE = "data/budgets.json"
@@ -19,8 +19,8 @@ class BudgetAlertFrame(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
 
-        tk.Label(self, text="📧 Budget Alerts", font=("Arial", 14)).pack(pady=10)
-        tk.Button(self, text="🔄 Refresh Budgets", command=self.load_budgets).pack(pady=(0, 10))
+        tk.Label(self, text="Budget Alerts", font=("Arial", 25, "bold")).pack(pady=10)
+        tk.Button(self, text="Refresh Budgets", command=self.load_budgets).pack(pady=(0, 10))
 
         self.budget_vars = {}
         self.budget_frame = tk.Frame(self)
@@ -30,7 +30,7 @@ class BudgetAlertFrame(tk.Frame):
         self.email_entry = tk.Entry(self, width=40)
         self.email_entry.pack(pady=5)
 
-        tk.Button(self, text="📤 Send Selected Alerts", command=self.check_and_send_alert).pack(pady=10)
+        tk.Button(self, text="Send Selected Alerts", command=self.check_and_send_alert).pack(pady=10)
 
         self.load_budgets()
 
@@ -107,7 +107,7 @@ class BudgetAlertFrame(tk.Frame):
             messagebox.showerror("Error", "Failed to send email. Check your credentials or internet.")
 
     def send_email(self, to_email, exceeded_list):
-        subject = "💸 Budget Alert: Limit Exceeded"
+        subject = "Budget Alert: Limit Exceeded"
         body = "The following selected budgets have been exceeded:\n\n"
         for cat, spent, limit in exceeded_list:
             body += f"{cat}: ₦{spent:.2f} spent / ₦{limit:.2f} limit\n"
@@ -134,8 +134,8 @@ class BudgetAlertFrame(tk.Frame):
                 server.login(SENDER_EMAIL, SENDER_PASSWORD)
                 print("Sending message...")
                 server.send_message(msg)
-            print("✅ Email sent successfully.")
+            print("Email sent successfully.")
             return True
         except Exception as e:
-            print("❌ Email failed:", e)
+            print("Email failed:", e)
             return False

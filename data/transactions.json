@@ -1,58 +1,23 @@
 [
     {
-        "date": "21-08-2025",
-        "amount": 10000000.0,
+        "date": "12-08-2025",
+        "amount": 20000000.0,
         "category": "Business",
         "type": "income",
         "description": "Salary"
     },
     {
-        "date": "09-08-2025",
-        "amount": 2300000.0,
-        "category": "importation",
-        "type": "expense",
-        "description": "TVs, Frigde, ACs and Gas-cookers"
-    },
-    {
-        "date": "09-08-2025",
-        "amount": 10000000.0,
-        "category": "Business",
-        "type": "income",
-        "description": "salary"
-    },
-    {
-        "date": "08-09-2025",
+        "date": "12-08-2025",
         "amount": 120000.0,
-        "category": "Cloths",
+        "category": "Book",
         "type": "expense",
-        "description": "Market"
+        "description": "Texts Books"
     },
     {
-        "date": "09-08-2025",
-        "amount": 90000.0,
-        "category": "Books",
-        "type": "expense",
-        "description": "Library"
-    },
-    {
-        "date": "10-08-2025",
-        "amount": 30000.0,
-        "category": "Books",
-        "type": "expense",
-        "description": "Library"
-    },
-    {
-        "date": "10-08-2025",
-        "amount": 2500000.0,
-        "category": "Kitchen",
-        "type": "expense",
-        "description": "Spoons, Knife and Fork"
-    },
-    {
-        "date": "12-10-2025",
-        "amount": 4800000.0,
+        "date": "12-08-2025",
+        "amount": 6000000.0,
         "category": "Importation",
         "type": "expense",
-        "description": "Game console"
+        "description": "Laptops & Gadgets"
     }
 ]

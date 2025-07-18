@@ -11,35 +11,35 @@ class BudgetFrame(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
 
-        tk.Label(self, text="📊 Budget Overview", font=("Arial", 14)).pack(pady=(10, 5))
+        tk.Label(self, text="Budget Overview", font=("Arial", 25,"bold")).pack(pady=(10, 5))
 
-        # 🔼 Top input row: category, limit, add
+        #Top input row: category, limit, add
         input_frame = tk.Frame(self)
         input_frame.pack(pady=(5, 10))
 
         tk.Label(input_frame, text="Category:").grid(row=0, column=0, padx=2)
-        self.category_entry = tk.Entry(input_frame, width=15)
+        self.category_entry = tk.Entry(input_frame, width=25)
         self.category_entry.grid(row=0, column=1, padx=2)
 
         tk.Label(input_frame, text="Limit (₦):").grid(row=0, column=2, padx=2)
-        self.limit_entry = tk.Entry(input_frame, width=10)
+        self.limit_entry = tk.Entry(input_frame, width=18)
         self.limit_entry.grid(row=0, column=3, padx=2)
 
-        tk.Button(input_frame, text="➕ Add Budget", command=self.add_budget).grid(row=0, column=4, padx=5)
+        tk.Button(input_frame, text="Add Budget", command=self.add_budget).grid(row=0, column=4, padx=5)
 
-        # 📋 Listbox in the middle
+        #Listbox in the middle
         self.listbox = tk.Listbox(
             self, height=10, width=60, font=("Consolas", 11),
             selectmode=tk.SINGLE, selectbackground="blue", activestyle="none"
         )
         self.listbox.pack(pady=5)
 
-        # 🔽 Bottom action row
+        #Bottom action row
         action_frame = tk.Frame(self)
         action_frame.pack(pady=10)
 
-        tk.Button(action_frame, text="🗑 Delete Selected", command=self.delete_selected_budget).pack(side=tk.LEFT, padx=5)
-        tk.Button(action_frame, text="🔄 Refresh", command=self.load_budgets).pack(side=tk.LEFT, padx=5)
+        tk.Button(action_frame, text="Delete Selected", command=self.delete_selected_budget).pack(side=tk.LEFT, padx=5)
+        tk.Button(action_frame, text="Refresh", command=self.load_budgets).pack(side=tk.LEFT, padx=5)
 
         self.budgets = {}
         self.load_budgets()
@@ -138,4 +138,7 @@ class BudgetFrame(tk.Frame):
         with open(BUDGET_FILE, "w") as f:
             json.dump(self.budgets, f, indent=4)
 
+        self.load_budgets()
+
+    def update_spending_from_transactions(self):
         self.load_budgets()

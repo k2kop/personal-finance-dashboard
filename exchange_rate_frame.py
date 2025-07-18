@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from exchange_rate import scrape_exchange_rate
 
-# Full ISO 4217 currency list (shortened for now — you can expand as needed)
 CURRENCIES = [
     "USD", "NGN", "EUR", "GBP", "CAD", "AUD", "JPY", "CNY", "INR", "ZAR", "BRL",
     "KES", "GHS", "UGX", "TND", "EGP", "MAD", "XAF", "XOF"
@@ -42,7 +41,7 @@ class ExchangeRateFrame(ttk.Frame):
         self.amount_entry.grid(row=2, column=1, padx=10, pady=5)
 
         # Convert Button
-        ttk.Button(self, text="🔄 Convert", command=self.convert).pack(pady=10)
+        ttk.Button(self, text="Convert", command=self.convert).pack(pady=10)
 
         # Result Display
         self.result_label = ttk.Label(self, text="", font=("Arial", 14))

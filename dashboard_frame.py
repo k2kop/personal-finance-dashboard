@@ -33,10 +33,10 @@ class ReportFrame(ttk.Frame):
         self.summary_label = ttk.Label(self, text="", font=("Arial", 12))
         self.summary_label.pack(pady=5)
 
-        self.chart_canvas = None  # Store reference to chart canvas
-        self.refresh_button = None  # Store reference to refresh button
+        self.chart_canvas = None  
+        self.refresh_button = None  
 
-        self.refresh_dashboard()  # Initial load
+        self.refresh_dashboard()  
 
     def refresh_dashboard(self):
         self.calculate_totals()

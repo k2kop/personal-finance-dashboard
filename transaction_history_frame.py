@@ -11,13 +11,13 @@ class TransactionHistoryFrame(ttk.Frame):
         self.pack(fill="both", expand=True)
 
         # Title
-        ttk.Label(self, text="Transaction History", font=("Arial", 25)).pack(pady=10)
+        ttk.Label(self, text="Transaction History", font=("Arial", 25, "bold")).pack(pady=10)
         
         button_row = ttk.Frame(self)
         button_row.pack(pady=10)
         
-        ttk.Button(self, text="⬇Download as CSV", command=self.export_csv).pack(pady=10)
-        ttk.Button(button_row, text="🔄 Refresh", command=self.load_transactions).pack(side="left", padx=5)
+        ttk.Button(self, text="Download as CSV", command=self.export_csv).pack(pady=10)
+        ttk.Button(button_row, text="Refresh", command=self.load_transactions).pack(side="left", padx=5)
         
 
         # Treeview table
