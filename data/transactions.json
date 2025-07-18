@@ -1,23 +1,9 @@
 [
     {
-        "date": "12-08-2025",
+        "date": "12-09-2025",
         "amount": 20000000.0,
         "category": "Business",
         "type": "income",
         "description": "Salary"
-    },
-    {
-        "date": "12-08-2025",
-        "amount": 120000.0,
-        "category": "Book",
-        "type": "expense",
-        "description": "Texts Books"
-    },
-    {
-        "date": "12-08-2025",
-        "amount": 6000000.0,
-        "category": "Importation",
-        "type": "expense",
-        "description": "Laptops & Gadgets"
     }
 ]
